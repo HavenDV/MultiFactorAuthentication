@@ -1,0 +1,142 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+             d:DesignWidth="500" 
+             d:DesignHeight="500"
+             Background="Transparent"
+             x:Class="MultiFactorAuthentication.Controls.AnimatedTimer">
+
+  <UserControl.Styles>
+    <Style Selector="Canvas.First">
+      <Style.Animations>
+        <Animation Duration="0:0:30"
+                   IterationCount="INFINITE">
+          <KeyFrame Cue="0%">
+            <Setter Property="RotateTransform.Angle" Value="0.0"/>
+          </KeyFrame>
+          <KeyFrame Cue="100%">
+            <Setter Property="RotateTransform.Angle" Value="360.0"/>
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+    <Style Selector="Canvas.StaticFirst">
+      <Style.Animations>
+        <Animation Duration="0:0:30"
+                   IterationCount="INFINITE">
+          <KeyFrame Cue="0%">
+            <Setter Property="Opacity" Value="1"/>
+          </KeyFrame>
+          <KeyFrame Cue="50%">
+            <Setter Property="Opacity" Value="1"/>
+          </KeyFrame>
+          <KeyFrame Cue="50%">
+            <Setter Property="Opacity" Value="0"/>
+          </KeyFrame>
+          <KeyFrame Cue="100%">
+            <Setter Property="Opacity" Value="0"/>
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+    <Style Selector="Canvas.StaticSecond">
+      <Style.Animations>
+        <Animation Duration="0:0:30"
+                   IterationCount="INFINITE">
+          <KeyFrame Cue="0%">
+            <Setter Property="Opacity" Value="0"/>
+          </KeyFrame>
+          <KeyFrame Cue="50%">
+            <Setter Property="Opacity" Value="0"/>
+          </KeyFrame>
+          <KeyFrame Cue="50%">
+            <Setter Property="Opacity" Value="1"/>
+          </KeyFrame>
+          <KeyFrame Cue="100%">
+            <Setter Property="Opacity" Value="1"/>
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+    <Style Selector="Canvas.Main">
+      <Style.Animations>
+        <Animation Duration="0:0:30"
+                   IterationCount="INFINITE">
+          <KeyFrame Cue="0%">
+            <Setter Property="Opacity" Value="1"/>
+          </KeyFrame>
+          <KeyFrame Cue="100%">
+            <Setter Property="Opacity" Value="1"/>
+          </KeyFrame>
+        </Animation>
+      </Style.Animations>
+    </Style>
+  </UserControl.Styles>
+  <Grid Background="Transparent">
+    <Canvas Margin="5">
+      <Path Stroke="Orange"
+            StrokeThickness="4">
+        <Path.Data>
+          <EllipseGeometry Rect="0,0,100,100"/>
+        </Path.Data>
+      </Path>
+    </Canvas>
+    <Canvas Classes="First" 
+            Margin="5" 
+            RenderTransformOrigin="50,50">
+      <Path Stroke="OrangeRed"
+            StrokeThickness="4" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="50, 100">
+              <ArcSegment Size="50, 50"
+                          Point="50, 0"
+                          IsLargeArc="False"
+                          SweepDirection="Clockwise"/>
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+      <Canvas.RenderTransform>
+        <RotateTransform/>
+      </Canvas.RenderTransform>
+    </Canvas>
+    <Canvas Classes="StaticFirst" Margin="5">
+      <Path Stroke="Orange"
+            StrokeThickness="4" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="50, 100">
+              <ArcSegment Size="50, 50"
+                          Point="50, 0"
+                          IsLargeArc="False"
+                          SweepDirection="Clockwise"/>
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+    <Canvas Classes="StaticSecond" Margin="5">
+      <Path Stroke="OrangeRed"
+            StrokeThickness="4" >
+        <Path.Data>
+          <PathGeometry>
+            <PathFigure StartPoint="50, 0">
+              <ArcSegment Size="50, 50"
+                          Point="50, 100"
+                          IsLargeArc="False"
+                          SweepDirection="Clockwise"/>
+            </PathFigure>
+          </PathGeometry>
+        </Path.Data>
+      </Path>
+    </Canvas>
+    <Canvas Classes="Main" Margin="5">
+      <Ellipse Fill="White" Width="100" Height="100"/>
+    </Canvas>
+  </Grid>
+  <!--
+  <Ellipse Classes="red" Fill="Red"/>-->
+</UserControl>
