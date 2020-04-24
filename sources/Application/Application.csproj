@@ -5,6 +5,16 @@
     <AssemblyName>MultiFactorAuthentication</AssemblyName>
     <RootNamespace>MultiFactorAuthentication</RootNamespace>
   </PropertyGroup>
+  <PropertyGroup>
+    <CFBundleName>AppName</CFBundleName>
+    <CFBundleDisplayName>MyBestThingEver</CFBundleDisplayName>
+    <CFBundleIdentifier>com.example</CFBundleIdentifier>
+    <CFBundleVersion>1.0.0</CFBundleVersion>
+    <CFBundlePackageType>AAPL</CFBundlePackageType>
+    <CFBundleExecutable>AppName</CFBundleExecutable>
+    <NSPrincipalClass>NSApplication</NSPrincipalClass>
+    <NSHighResolutionCapable>true</NSHighResolutionCapable>
+  </PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Compile Update="**\*.xaml.cs">
@@ -19,5 +29,6 @@
     <PackageReference Include="Avalonia" Version="0.9.0" />
     <PackageReference Include="Avalonia.Desktop" Version="0.9.0" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.0" />
+    <PackageReference Include="Dotnet.Bundle" Version="*" />
   </ItemGroup>
 </Project>
