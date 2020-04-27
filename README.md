@@ -6,3 +6,12 @@
 
 Cross-platform implementation of the circular timer using AvaloniaUI and .Net Core 3.1.  
 Tested under Windows 10 and macOS 10.14
+
+## Links used:
+1. [Template](https://habr.com/ru/post/438920/)
+2. [Template Repository](https://github.com/AvaloniaUI/avalonia-dotnet-templates)
+3. [Avalonia Keyframe Animations](https://avaloniaui.net/docs/animations/keyframe)
+4. [Avalonia macOS Packing](https://avaloniaui.net/docs/packing/macOS)
+5. [ReactiveUI Tutorial 1](https://habr.com/ru/post/303650/)
+6. [ReactiveUI Tutorial 2](https://habr.com/ru/post/305350/)
+7. [ReactiveUI.Fody](https://github.com/kswoll/ReactiveUI.Fody)
