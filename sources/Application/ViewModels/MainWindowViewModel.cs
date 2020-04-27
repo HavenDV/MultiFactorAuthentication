@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MultiFactorAuthentication.ViewModels
+﻿namespace MultiFactorAuthentication.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
