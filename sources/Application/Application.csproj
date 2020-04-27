@@ -31,6 +31,6 @@
     <PackageReference Include="Avalonia" Version="0.9.9" />
     <PackageReference Include="Avalonia.Desktop" Version="0.9.9" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.9.9" />
-    <PackageReference Include="Dotnet.Bundle" Version="0.9.12" />
+    <PackageReference Include="Dotnet.Bundle" Version="0.9.13" />
   </ItemGroup>
 </Project>
